@@ -1,0 +1,34 @@
+/**
+ * @author: Juan Estiven Mazo <estivenm930@gmail.com>
+ */
+
+const { makeExecutableSchema } = require('graphql-tools'); // crear esquema auto ejecutable
+const userResolvers =require('./user.resolver.js');
+const userTypes = require('./user.types.js');
+
+console.log('------------------------------------');
+console.log('en schema');
+console.log('------------------------------------');
+
+const rootQuery = `
+# definiendo endPoints (entradas al schema) y formas de acceder
+  type Query{
+    users: [User] # consultar todos los usuarios
+    user(emailUser:String): [User] # consultar todos los usuarios
+    keywords(idUser:Int):Keywords
+    userLogOut(id:Int):UserLoginToken
+    # userWebDato(id: Int): [UserWebDato3]
+  }
+
+  type Mutation{
+     # add token the user
+    NewUserToken(userToken:NewUserToken):UserLoginToken
+  }
+`;
+
+const schema = makeExecutableSchema({
+  typeDefs:[rootQuery,userTypes],
+  resolvers:userResolvers
+});
+
+module.exports = schema
