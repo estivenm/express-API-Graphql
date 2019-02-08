@@ -12,7 +12,7 @@ module.exports = {
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'aulavirtual_argos2015b', // isagen,'aulavirtual_argos2015b'
+    database: '',
     port: 3306,
   },
   email: {
