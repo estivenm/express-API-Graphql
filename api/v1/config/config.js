@@ -3,9 +3,9 @@
  */
 
 module.exports = {
-  SECRET_TOKEN: 'nZ/zSOTHUUOWozxhi1oN0/wS8Sa8AkZOVtXAaJStpagXVLhwtPXa2ZOyUMIuHoQfXqwCU9Olq1pdxsv2BlQgY1NqdniZMqPxoKbQqR1MRQM',
+  SECRET_TOKEN: '',
   auth: {
-    secret: 'nZ/zSOTHUUOWozxhi1oN0/wS8Sa8AkZOVtXAaJStpagXVLhwtPXa2ZOyUMIuHoQfXqwCU9Olq1pdxsv2BlQgY1NqdniZMqPxoKbQqR1MRQMtrainme',
+    secret: '',
   },
   port: 1050,
   db: {
@@ -16,7 +16,7 @@ module.exports = {
     port: 3306,
   },
   email: {
-    user: 'jmazo@h2apublicidad.com',
+    user: '',
     pass: '',
   },
 };
